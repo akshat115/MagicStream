@@ -40,8 +40,9 @@ func main() {
 			log.Println("Allowed Origin:", origins[i])
 		}
 	} else {
-		origins = []string{"http://localhost:5173"}
+		origins = []string{"http://localhost:5173", "http://localhost:5174"}
 		log.Println("Allowed Origin: http://localhost:5173")
+		log.Println("Allowed Origin: http://localhost:5174")
 	}
 
 	config := cors.Config{}

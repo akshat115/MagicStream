@@ -202,10 +202,10 @@ func GetReviewRanking(admin_review string, client *mongo.Client, c *gin.Context)
 		log.Println("Warning: .env file not found")
 	}
 
-	OpenAiApiKey := os.Getenv("OPENAI_API_KEY")
+	OpenAiApiKey := os.Getenv("QWEN3_API_KEY")
 
 	if OpenAiApiKey == "" {
-		return "", 0, errors.New("could not read OPENAI_API_KEY")
+		return "", 0, errors.New("could not read QWEN3_API_KEY")
 	}
 
 	llm, err := openai.New(openai.WithToken(OpenAiApiKey))

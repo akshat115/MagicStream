@@ -7,7 +7,7 @@ const Movie = ({movie,updateMovieReview}) => {
     return (
         <div className="col-md-4 mb-4" key={movie._id}>
             <Link
-                to={`/stream/${movie.youtube_id}`}
+                to={`/stream/${encodeURIComponent(movie.youtube_id)}`}
                 style={{ textDecoration: 'none', color: 'inherit' }}
             >
             <div className="card h-100 shadow-sm movie-card">
